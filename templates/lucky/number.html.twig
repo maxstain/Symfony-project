@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Lucky Number!
+{% block title %}Lucky Number
 {% endblock %}
 
 {% block body %}
@@ -11,15 +11,23 @@
 			width: 95%;
 			font: 18px / 1.5 sans-serif;
 		}
-		.example-wrapper code {
+		.example-wrapper h1 {
 			background: #F5F5F5;
 			padding: 2px 6px;
 		}
 	</style>
 
 	<div class="example-wrapper">
-		<h1>Lucky Number:
+		<h1>{{ phrase }}
 			{{ number }}
 		</h1>
+		<ul>
+			{% for num in numbers %}
+				<li>
+					{{ num[0] }}
+					{{ num[1] }}
+				</li>
+			{% endfor %}
+		</ul>
 	</div>
 {% endblock %}
