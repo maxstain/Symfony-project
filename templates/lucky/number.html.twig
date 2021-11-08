@@ -18,16 +18,17 @@
 	</style>
 
 	<div class="example-wrapper">
-		<h1>{{ phrase }}
-			{{ number }}
-		</h1>
-		<ul>
-			{% for num in numbers %}
-				<li>
-					{{ num[0] }}
-					{{ num[1] }}
-				</li>
-			{% endfor %}
-		</ul>
+		<form>
+			<table>
+				<tr>
+					<label>Email:</label>
+					<td><input name="email" type="email"/></td>
+				</tr>
+				<tr>
+					<label>Password:</label>
+					<td><input name="password" type="password"/></td>
+				</tr>
+			</table>
+		</form>
 	</div>
 {% endblock %}
