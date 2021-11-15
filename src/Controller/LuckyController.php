@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpKernel\Exception\HttpException;
@@ -23,6 +24,18 @@ class LuckyController extends AbstractController
         return $this->render('lucky/number.html.twig', [
             'number' => $number,
             'phrase' => $phrase,
+        ]);
+    }
+
+    /**
+     * @Route("/index")
+     */
+    public function index(): Response
+    {
+        $req = Request::createFromGlobals();
+        $mail = $req->query;
+        return $this->render('lucky/number.html.twig', [
+            
         ]);
     }
 }
