@@ -4,37 +4,9 @@
 {% endblock %}
 
 {% block body %}
-	<style>
-		.navbar {
-			padding: 2rem;
-			background: black;
-			color: #fff;
-			display: flex;
-			justify-content: space-between;
-		}
-		.navbar ul {
-			display: flex;
-			list-style-type: none;
-		}
-		.navbar li {
-			padding: 1rem;
-		}
+	<style></style>
 
-		.navbar li a {
-			color: #fff;
-			text-decoration: none;
-		}
-	</style>
-
-	<div class="navbar">
+	<div>
 		<h1>{{message}}</h1>
-		<div>
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="#">Products</a></li>
-				<li><a href="#">Contact</a></li>
-				<li><a href="/lucky/number/{{random(100)}}">Lucky  Number</a></li>
-			</ul>
-		</div>
 	</div>
 {% endblock %}
