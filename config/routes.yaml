@@ -4,3 +4,6 @@ index:
 lucky_number:
   path: /lucky/number
   controller: App\Controller\LuckyController::number
+articles:
+  path: /articles
+  controller: App\Controller\ArticleController::index
