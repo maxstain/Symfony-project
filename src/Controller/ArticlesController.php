@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ArticleController extends AbstractController
+class ArticlesController extends AbstractController
 {
     /**
      * @Route("/articles")
@@ -15,7 +15,7 @@ class ArticleController extends AbstractController
     public function index(): Response
     {
         $articles=["Article1", "Article2", "Article3"];
-        return $this->render('article/index.html.twig', [
+        return $this->render('articles/index.html.twig', [
             'articles' => $articles,
         ]);
     }
