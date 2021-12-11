@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ArticlesController extends AbstractController
 {
     /**
-     * @Route("/articles")
+     * @Route("/articles", name="articles_show_all")
      */
 
     public function showArticles(ArticleRepository $articleRepository): Response
@@ -35,9 +35,17 @@ class ArticlesController extends AbstractController
         $article->setPrix($prix);
         $entityManager->persist($article);
         $entityManager->flush();
-        return $this->render('articles/index.html.twig', [
-            'articles' => $article,
-            'adjectif' => 'ajoutée',
-        ]);
+        return $this->redirectToRoute('articles_show_all');
+    }
+
+    /**
+     * @Route("/articles/delete/{id}")
+     */
+
+    public function deleteArticle(EntityManagerInterface $entityManager, Article $article): Response
+    {
+        $entityManager->remove($article);
+        $entityManager->flush();
+        return $this->redirectToRoute('articles_show_all');
     }
 }
