@@ -11,5 +11,47 @@
 		<h1>
 			{{ controller_name }}
 		</h1>
+		<form class="form">
+			<table>
+				<tr>
+					<td>
+						<span>
+							<label>Descripteur</label>
+						</span>
+					</td>
+					<td>
+						<input type="text" placeholder="descripteur"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>
+							<label>Description:</label>
+						</span>
+					</td>
+					<td>
+						<input type="text" placeholder="description"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>
+							<label>Prix:</label>
+						</span>
+					</td>
+					<td>
+						<input type="text" placeholder="Prix"/>
+					</td>
+				</tr>
+				<tr class="text-center">
+					<td>
+						<input class="btn btn-primary" type="button" value="Add"/>
+					</td>
+					<td>
+						<input class="btn btn-light" type="button" value="Cancel"/>
+					</td>
+				</tr>
+			</table>
+		</form>
 	</div>
 {% endblock %}
