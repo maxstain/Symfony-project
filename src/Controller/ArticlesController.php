@@ -24,21 +24,6 @@ class ArticlesController extends AbstractController
     }
 
     /**
-     * @Route("/articles/add/{designation}/{Description}/{prix}")
-     */
-
-    public function addArticle(EntityManagerInterface $entityManager, string $designation, string $Description, float $prix): Response
-    {
-        $article = new Article();
-        $article->setDesignation($designation);
-        $article->setDescription($Description);
-        $article->setPrix($prix);
-        $entityManager->persist($article);
-        $entityManager->flush();
-        return $this->redirectToRoute('articles_show_all');
-    }
-
-    /**
      * @Route("/articles/delete/{id}")
      */
 
