@@ -17,7 +17,7 @@ class LuckyController extends AbstractController
     public function number($max): Response
     {
         if (!is_numeric($max)) {
-            throw new HttpException(404, "Not Found");
+            throw new HttpException(404, "Not Found !!");
         }
         $number = random_int(0, $max);
         $phrase = "Lucky number is: ";
