@@ -8,5 +8,11 @@
 	<div>
 		{{ phrase }}
 		{{ number }}
+		<br/>
+		<ul>
+			{% for i in num %}
+				<li>{{ i }}</li>
+			{% endfor %}
+		</ul>
 	</div>
 {% endblock %}
