@@ -1,28 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	Ajout Article
+	{{ controller_name }}
 {% endblock %}
 
 {% block body %}
 	<style></style>
 
 	<div class="container">
-		<h1>Hello
-			{{ controller_name }}! ✅</h1>
-
-		This friendly message is coming from:
-		<ul>
-			<li>Your controller at
-				<code>
-					<a href="{{ 'C:/xampp/htdocs/project1/src/Controller/AjoutArticleController.php'|file_link(0) }}">src/Controller/AjoutArticleController.php</a>
-				</code>
-			</li>
-			<li>Your template at
-				<code>
-					<a href="{{ 'C:/xampp/htdocs/project1/templates/ajout_article/index.html.twig'|file_link(0) }}">templates/ajout_article/index.html.twig</a>
-				</code>
-			</li>
-		</ul>
+		<h1>
+			{{ controller_name }}
+		</h1>
 	</div>
 {% endblock %}

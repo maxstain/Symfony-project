@@ -14,7 +14,7 @@ class AjoutArticleController extends AbstractController
     public function index(): Response
     {
         return $this->render('ajout_article/index.html.twig', [
-            'controller_name' => 'AjoutArticleController',
+            'controller_name' => 'Ajout article',
         ]);
     }
 }
