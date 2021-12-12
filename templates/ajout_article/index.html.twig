@@ -11,21 +11,24 @@
 		<h1>
 			{{ controller_name }}
 		</h1>
-		<form action="">
+		<form action="" method="get">
 			<div class="form-group">
-				<label for="descripteur">Descripteur</label>
-				<input type="text" class="form-control" id="descripteur" area-describedby="descripteurHelp" placeholder="Descripteur"/>
+				<label for="designateur">Designateur</label>
+				<input type="text" name="designateur" class="form-control" id="designateur" area-describedby="designateurHelp" placeholder="Designateur"/>
+
 			</div>
 			<div class="form-group">
 				<label for="description">Description</label>
-				<input type="text" class="form-control" id="description" area-describedby="descriptionHelp" placeholder="Description"/>
+				<input type="text" name="description" class="form-control" id="description" area-describedby="descriptionHelp" placeholder="Description"/>
+
 			</div>
 			<div class="form-group">
 				<label for="prix">Prix</label>
-				<input type="text" class="form-control" id="prix" area-describedby="prixHelp" placeholder="Prix"/>
+				<input type="text" name="prix" class="form-control" id="prix" area-describedby="prixHelp" placeholder="Prix"/>
+
 			</div>
 			<div class="text-center">
-				<button type="button" class="btn btn-primary">Add</button>
+				<button type="submit" class="btn btn-primary">Add</button>
 				<button type="reset" class="btn btn-light">Cancel</button>
 			</div>
 		</form>
