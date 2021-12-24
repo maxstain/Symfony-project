@@ -366,6 +366,9 @@
         <argument type="service" id=".service_locator.W9y3dzm.App\Controller\LuckyController"/>
       </call>
     </service>
+    <service id="App\Form\ArticleFormType" class="App\Form\ArticleFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Repository\ArticleRepository" class="App\Repository\ArticleRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
@@ -947,9 +950,11 @@
       <argument type="service" id="form.registry"/>
       <argument type="collection">
         <argument>Symfony\Component\Form\Extension\Core\Type</argument>
+        <argument>App\Form</argument>
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\ArticleFormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
@@ -1355,7 +1360,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.Za9MpXe"/>
+      <argument type="service" id=".service_locator.YZnxvHI"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -5556,6 +5561,8 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\LuckyController" class="App\Controller\LuckyController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\LuckyController" class="App\Controller\LuckyController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\LuckyController" class="App\Controller\LuckyController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ArticleFormType" class="App\Form\ArticleFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\ArticleFormType" class="App\Form\ArticleFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ArticleRepository" class="App\Repository\ArticleRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ArticleRepository" class="App\Repository\ArticleRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\TestRepository" class="App\Repository\TestRepository" autowire="true" abstract="true"/>
@@ -5875,6 +5882,13 @@
         <argument key="loader" type="service_closure" id=".errored..service_locator.KfbR3DY.Symfony\Component\Config\Loader\LoaderInterface"/>
       </argument>
     </service>
+    <service id=".service_locator._yFlKf." class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="request" type="service_closure" id=".errored..service_locator._yFlKf..Symfony\Component\BrowserKit\Request"/>
+      </argument>
+    </service>
     <service id=".service_locator.ys8EL7c" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5888,17 +5902,12 @@
         <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
-    <service id=".service_locator.l2QwsaZ" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.1NQWjPx" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
-      </argument>
-    </service>
-    <service id=".service_locator.VdPZNW." class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
+        <argument key="App\Controller\AjoutArticleController::addArticle" type="service_closure" id=".service_locator._yFlKf."/>
         <argument key="App\Controller\ArticleController::index" type="service_closure" id=".service_locator.ys8EL7c"/>
-        <argument key="App\Controller\ArticlesController::addArticle" type="service_closure" id=".service_locator.l2QwsaZ"/>
+        <argument key="App\Controller\ArticlesController::addArticle" type="service_closure" id=".service_locator._yFlKf."/>
         <argument key="App\Controller\ArticlesController::deleteArticle" type="service_closure" id=".service_locator.NcUNQMU"/>
         <argument key="App\Controller\ArticlesController::showArticles" type="service_closure" id=".service_locator.ys8EL7c"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.KfbR3DY"/>
@@ -5907,8 +5916,9 @@
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="kernel::terminate" type="service_closure" id=".service_locator.KfwZsne"/>
+        <argument key="App\Controller\AjoutArticleController:addArticle" type="service_closure" id=".service_locator._yFlKf."/>
         <argument key="App\Controller\ArticleController:index" type="service_closure" id=".service_locator.ys8EL7c"/>
-        <argument key="App\Controller\ArticlesController:addArticle" type="service_closure" id=".service_locator.l2QwsaZ"/>
+        <argument key="App\Controller\ArticlesController:addArticle" type="service_closure" id=".service_locator._yFlKf."/>
         <argument key="App\Controller\ArticlesController:deleteArticle" type="service_closure" id=".service_locator.NcUNQMU"/>
         <argument key="App\Controller\ArticlesController:showArticles" type="service_closure" id=".service_locator.ys8EL7c"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.KfbR3DY"/>
@@ -5975,9 +5985,10 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.Za9MpXe" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.YZnxvHI" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\ArticleFormType" type="service_closure" id="App\Form\ArticleFormType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service_closure" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service_closure" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ColorType" type="service_closure" id="form.type.color"/>
@@ -6334,6 +6345,7 @@
     </service>
     <service id=".errored..service_locator.KfwZsne.Symfony\Component\HttpFoundation\Response" class="Symfony\Component\HttpFoundation\Response"/>
     <service id=".errored..service_locator.KfbR3DY.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
+    <service id=".errored..service_locator._yFlKf..Symfony\Component\BrowserKit\Request" class="Symfony\Component\BrowserKit\Request"/>
     <service id=".errored..service_locator.NcUNQMU.App\Entity\Article" class="App\Entity\Article"/>
     <service id=".service_locator.XXv1IfR" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
@@ -6442,12 +6454,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.VdPZNW."/>
+      <argument type="service" id=".service_locator.1NQWjPx"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.VdPZNW."/>
+      <argument type="service" id=".service_locator.1NQWjPx"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -7298,7 +7310,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.0GV1BZZ" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.VdPZNW."/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.1NQWjPx"/>
     <service id="session" alias=".session.do-not-use" public="true">
       <deprecated package="symfony/framework-bundle" version="5.3">The "%alias_id%" service and "SessionInterface" alias are deprecated, use "$requestStack-&gt;getSession()" instead.</deprecated>
     </service>
@@ -7319,9 +7331,9 @@
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id=".service_locator._5g_Wvc" alias=".service_locator.KfwZsne"/>
     <service id=".service_locator.JBAFp66" alias=".service_locator.KfbR3DY"/>
+    <service id=".service_locator.tzbDlgI" alias=".service_locator._yFlKf."/>
     <service id=".service_locator.SXPi9O." alias=".service_locator.ys8EL7c"/>
     <service id=".service_locator.H6AmQ9Q" alias=".service_locator.NcUNQMU"/>
-    <service id=".service_locator.Er0_7SX" alias=".service_locator.l2QwsaZ"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.anofQPJ"/>
     <service id=".service_locator.NK827YO" alias=".service_locator.W9y3dzm"/>
     <service id="validator" alias="debug.validator" public="true"/>

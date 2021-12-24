@@ -13,7 +13,6 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
-        '/articles/add' => [[['_route' => 'ajout_article', '_controller' => 'App\\Controller\\AjoutArticleController::index'], null, null, null, false, false, null]],
         '/articles' => [
             [['_route' => 'articles_show_all', '_controller' => 'App\\Controller\\ArticlesController::showArticles'], null, null, null, false, false, null],
             [['_route' => 'articles', '_controller' => 'App\\Controller\\ArticleController::index'], null, null, null, false, false, null],
@@ -45,9 +44,9 @@ return [
                 .'|/articles/(?'
                     .'|([^/]++)(*:189)'
                     .'|delete/([^/]++)(*:212)'
-                    .'|add\\?designateur\\=([^/]+)&description\\=([^/]+)&prix\\=([^/]++)(*:281)'
+                    .'|add(*:223)'
                 .')'
-                .'|/lucky/number/([^/]++)(*:312)'
+                .'|/lucky/number/([^/]++)(*:254)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -60,8 +59,8 @@ return [
         159 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
         189 => [[['_route' => 'article', '_controller' => 'App\\Controller\\ArticleController::index'], ['id'], null, null, false, true, null]],
         212 => [[['_route' => 'app_articles_deletearticle', '_controller' => 'App\\Controller\\ArticlesController::deleteArticle'], ['id'], null, null, false, true, null]],
-        281 => [[['_route' => 'app_articles_addarticle', '_controller' => 'App\\Controller\\ArticlesController::addArticle'], ['designation', 'description', 'prix'], null, null, false, true, null]],
-        312 => [
+        223 => [[['_route' => 'ajout_article', '_controller' => 'App\\Controller\\ArticlesController::addArticle'], [], null, null, false, false, null]],
+        254 => [
             [['_route' => 'app_lucky_number', '_controller' => 'App\\Controller\\LuckyController::number'], ['max'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
