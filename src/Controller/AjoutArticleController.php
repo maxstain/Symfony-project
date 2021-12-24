@@ -23,7 +23,6 @@ class AjoutArticleController extends AbstractController
     /**
      * @Route("/articles/add?designateur={designation}&description={description}&prix={prix}")
      */
-
     public function addArticle(EntityManagerInterface $entityManager, string $designation, string $Description, float $prix): Response
     {
         $article = new Article();
