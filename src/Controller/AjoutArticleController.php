@@ -31,6 +31,6 @@ class AjoutArticleController extends AbstractController
         $article->setPrix($prix);
         $entityManager->persist($article);
         $entityManager->flush();
-        return $this->redirectToRoute('articles_show_all');
+        return $this->redirectToRoute('/articles');
     }
 }
