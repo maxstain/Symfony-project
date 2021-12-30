@@ -14,7 +14,7 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
-    'article' => [['id'], ['_controller' => 'App\\Controller\\ArticleController::index'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/articles']], [], []],
+    'article' => [['id'], ['_controller' => 'App\\Controller\\ArticleController::index'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/article']], [], []],
     'articles_show_all' => [[], ['_controller' => 'App\\Controller\\ArticlesController::showArticles'], [], [['text', '/articles']], [], []],
     'app_articles_deletearticle' => [['id'], ['_controller' => 'App\\Controller\\ArticlesController::deleteArticle'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/articles/delete']], [], []],
     'ajout_article' => [[], ['_controller' => 'App\\Controller\\ArticlesController::addArticle'], [], [['text', '/articles/add']], [], []],

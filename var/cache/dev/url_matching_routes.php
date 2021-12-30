@@ -17,6 +17,7 @@ return [
             [['_route' => 'articles_show_all', '_controller' => 'App\\Controller\\ArticlesController::showArticles'], null, null, null, false, false, null],
             [['_route' => 'articles', '_controller' => 'App\\Controller\\ArticleController::index'], null, null, null, false, false, null],
         ],
+        '/articles/add' => [[['_route' => 'ajout_article', '_controller' => 'App\\Controller\\ArticlesController::addArticle'], null, null, null, false, false, null]],
         '/' => [
             [['_route' => 'app_home_index', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null],
             [['_route' => 'index', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null],
@@ -41,12 +42,11 @@ return [
                     .')'
                     .'|error/(\\d+)(?:\\.([^/]++))?(*:159)'
                 .')'
-                .'|/articles/(?'
-                    .'|([^/]++)(*:189)'
-                    .'|delete/([^/]++)(*:212)'
-                    .'|add(*:223)'
+                .'|/article(?'
+                    .'|/([^/]++)(*:188)'
+                    .'|s/delete/([^/]++)(*:213)'
                 .')'
-                .'|/lucky/number/([^/]++)(*:254)'
+                .'|/lucky/number/([^/]++)(*:244)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -57,10 +57,9 @@ return [
         114 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         124 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
         159 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
-        189 => [[['_route' => 'article', '_controller' => 'App\\Controller\\ArticleController::index'], ['id'], null, null, false, true, null]],
-        212 => [[['_route' => 'app_articles_deletearticle', '_controller' => 'App\\Controller\\ArticlesController::deleteArticle'], ['id'], null, null, false, true, null]],
-        223 => [[['_route' => 'ajout_article', '_controller' => 'App\\Controller\\ArticlesController::addArticle'], [], null, null, false, false, null]],
-        254 => [
+        188 => [[['_route' => 'article', '_controller' => 'App\\Controller\\ArticleController::index'], ['id'], null, null, false, true, null]],
+        213 => [[['_route' => 'app_articles_deletearticle', '_controller' => 'App\\Controller\\ArticlesController::deleteArticle'], ['id'], null, null, false, true, null]],
+        244 => [
             [['_route' => 'app_lucky_number', '_controller' => 'App\\Controller\\LuckyController::number'], ['max'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
