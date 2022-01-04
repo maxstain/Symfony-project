@@ -125,7 +125,7 @@ class __TwigTemplate_85f3ebbc92f39014e26005dc8f51a6550a6f36c4f076c6ef1598419e6cc
                 echo "
 \t\t\t\t\t\t\tdt</td>
 \t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t<a href=\"/articles/";
+\t\t\t\t\t\t\t<a href=\"/article/";
                 // line 29
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 29), "html", null, true);
                 echo "\" class=\"btn btn-primary\">Détails</a>
@@ -202,7 +202,7 @@ class __TwigTemplate_85f3ebbc92f39014e26005dc8f51a6550a6f36c4f076c6ef1598419e6cc
 \t\t\t\t\t\t<td>{{ article.prix }}
 \t\t\t\t\t\t\tdt</td>
 \t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t<a href=\"/articles/{{article.id}}\" class=\"btn btn-primary\">Détails</a>
+\t\t\t\t\t\t\t<a href=\"/article/{{article.id}}\" class=\"btn btn-primary\">Détails</a>
 \t\t\t\t\t\t\t<a href=\"/articles/delete/{{article.id}}\" class=\"btn btn-danger\">Delete</a>
 \t\t\t\t\t\t</td>
 \t\t\t\t\t</tr>

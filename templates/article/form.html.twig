@@ -10,21 +10,39 @@
 			{{ controller_name }}
 		</h1>
 		{{ form_start(form) }}
+		<table>
+			<tr>
+				<td>{{ form_label(form.designation, "Designation") }}</td>
 
-		{{ form_label(form.designation, "Designation") }}
-		{{ form_errors(form.designation) }}
-		{{ form_widget(form.designation) }}
+				<td>{{ form_errors(form.designation) }}</td>
 
-		{{ form_label(form.Description, "Description") }}
-		{{ form_errors(form.Description) }}
-		{{ form_widget(form.Description) }}
+				<td>{{ form_widget(form.designation) }}</td>
 
-		{{ form_label(form.prix, "Le prix") }}
-		{{ form_errors(form.prix) }}
-		{{ form_widget(form.prix) }}
+			</tr>
+			<tr>
+				<td>{{ form_label(form.Description, "Description") }}</td>
+
+				<td>
+					{{ form_errors(form.Description) }}
+				</td>
+
+				<td>{{ form_widget(form.Description) }}</td>
+			</tr>
+			<tr>
+				<td>{{ form_label(form.prix, "Le prix") }}</td>
+
+				<td>{{ form_errors(form.prix) }}</td>
+
+				<td>{{ form_widget(form.prix) }}</td>
+			</tr>
+			<tr>
+				<td>
+					{{ form_widget(form.Submit) }}
+				</td>
+			</tr>
 
 
-		{{ form_rest(form) }}
-		{{ form_end(form) }}
-	</div>
-{% endblock %}
+			{{ form_rest(form) }}
+			{{ form_end(form) }}
+		</div>
+	{% endblock %}
