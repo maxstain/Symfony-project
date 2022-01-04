@@ -16,7 +16,7 @@ class ArticleFormType extends AbstractType
             ->add('designation')
             ->add('Description')
             ->add('prix')
-            ->add('Submit', SubmitType::class)
+            ->add('Ajouter', SubmitType::class)
         ;
     }
 
