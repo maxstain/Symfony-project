@@ -10,8 +10,22 @@
 			{{ controller_name }}
 		</h1>
 		{{ form_start(form) }}
-		{{ form_errors(form) }}
-		{{ form_widget(form) }}
+
+		{{ form_label(form.designation, "La designation de l'article") }}
+		{{ form_errors(form.designation) }}
+		{{ form_widget(form.designation) }}
+
+		{{ form_label(form.Description, "La description de l'article") }}
+		{{ form_errors(form.Description) }}
+		{{ form_widget(form.Description) }}
+
+		{{ form_label(form.prix, "Le prix de l'article") }}
+		{{ form_errors(form.prix) }}
+
+		{{ form_widget(form.prix) }}
+
+
+		{{ form_rest(form) }}
 		{{ form_end(form) }}
 	</div>
 {% endblock %}
