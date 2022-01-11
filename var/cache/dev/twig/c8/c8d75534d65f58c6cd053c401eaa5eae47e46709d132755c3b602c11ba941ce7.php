@@ -90,26 +90,30 @@ class __TwigTemplate_f5a7a26f749e9d2a6f1d83dd3f920578ba65649309ce371441080747b1d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 9
-        echo "\t<div class=\"\">
-\t\t<h1>
+        echo "\t<div class=\"card m-2\" style=\"width: 18rem;\">
+\t\t<h1 class=\"card-header\">
 \t\t\t";
         // line 11
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 11, $this->source); })()), "designation", [], "any", false, false, false, 11), "html", null, true);
         echo "
 \t\t</h1>
-\t\t<h6>
-\t\t\t";
-        // line 14
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 14, $this->source); })()), "Description", [], "any", false, false, false, 14), "html", null, true);
+\t\t<div class=\"card-body\">
+\t\t\t<div class=\"card-text\">
+\t\t\t\t<h6>
+\t\t\t\t\t";
+        // line 16
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 16, $this->source); })()), "Description", [], "any", false, false, false, 16), "html", null, true);
         echo "
-\t\t</h6>
-\t\t<span class=\"text-danger\">
-\t\t\t";
-        // line 17
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 17, $this->source); })()), "prix", [], "any", false, false, false, 17), "html", null, true);
+\t\t\t\t</h6>
+\t\t\t\t<span class=\"text-danger\">
+\t\t\t\t\t";
+        // line 19
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 19, $this->source); })()), "prix", [], "any", false, false, false, 19), "html", null, true);
         echo "
-\t\t\tdt
-\t\t</span>
+\t\t\t\t\tdt
+\t\t\t\t</span>
+\t\t\t</div>
+\t\t</div>
 \t</div>
 ";
         
@@ -132,7 +136,7 @@ class __TwigTemplate_f5a7a26f749e9d2a6f1d83dd3f920578ba65649309ce371441080747b1d
 
     public function getDebugInfo()
     {
-        return array (  109 => 17,  103 => 14,  97 => 11,  93 => 9,  83 => 8,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  111 => 19,  105 => 16,  97 => 11,  93 => 9,  83 => 8,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -145,17 +149,21 @@ class __TwigTemplate_f5a7a26f749e9d2a6f1d83dd3f920578ba65649309ce371441080747b1d
 {% endblock %}
 
 {% block body %}
-\t<div class=\"\">
-\t\t<h1>
+\t<div class=\"card m-2\" style=\"width: 18rem;\">
+\t\t<h1 class=\"card-header\">
 \t\t\t{{ article.designation }}
 \t\t</h1>
-\t\t<h6>
-\t\t\t{{ article.Description }}
-\t\t</h6>
-\t\t<span class=\"text-danger\">
-\t\t\t{{ article.prix }}
-\t\t\tdt
-\t\t</span>
+\t\t<div class=\"card-body\">
+\t\t\t<div class=\"card-text\">
+\t\t\t\t<h6>
+\t\t\t\t\t{{ article.Description }}
+\t\t\t\t</h6>
+\t\t\t\t<span class=\"text-danger\">
+\t\t\t\t\t{{ article.prix }}
+\t\t\t\t\tdt
+\t\t\t\t</span>
+\t\t\t</div>
+\t\t</div>
 \t</div>
 {% endblock %}
 ", "article/index.html.twig", "C:\\xampp\\htdocs\\project1\\templates\\article\\index.html.twig");

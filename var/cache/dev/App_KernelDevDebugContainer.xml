@@ -5872,6 +5872,12 @@
         <argument key="loader" type="service_closure" id=".errored..service_locator.KfbR3DY.Symfony\Component\Config\Loader\LoaderInterface"/>
       </argument>
     </service>
+    <service id=".service_locator.ewTmbP1" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="article" type="service_closure" id=".errored..service_locator.ewTmbP1.App\Entity\Article"/>
+      </argument>
+    </service>
     <service id=".service_locator.ys8EL7c" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5891,10 +5897,10 @@
         <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
-    <service id=".service_locator.VdPZNW." class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.Ba_rPpQ" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="App\Controller\ArticleController::index" type="service_closure" id=".service_locator.ys8EL7c"/>
+        <argument key="App\Controller\ArticleController::index" type="service_closure" id=".service_locator.ewTmbP1"/>
         <argument key="App\Controller\ArticlesController::addArticle" type="service_closure" id=".service_locator.l2QwsaZ"/>
         <argument key="App\Controller\ArticlesController::deleteArticle" type="service_closure" id=".service_locator.NcUNQMU"/>
         <argument key="App\Controller\ArticlesController::showArticles" type="service_closure" id=".service_locator.ys8EL7c"/>
@@ -5904,7 +5910,7 @@
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="kernel::terminate" type="service_closure" id=".service_locator.KfwZsne"/>
-        <argument key="App\Controller\ArticleController:index" type="service_closure" id=".service_locator.ys8EL7c"/>
+        <argument key="App\Controller\ArticleController:index" type="service_closure" id=".service_locator.ewTmbP1"/>
         <argument key="App\Controller\ArticlesController:addArticle" type="service_closure" id=".service_locator.l2QwsaZ"/>
         <argument key="App\Controller\ArticlesController:deleteArticle" type="service_closure" id=".service_locator.NcUNQMU"/>
         <argument key="App\Controller\ArticlesController:showArticles" type="service_closure" id=".service_locator.ys8EL7c"/>
@@ -6326,6 +6332,7 @@
     </service>
     <service id=".errored..service_locator.KfwZsne.Symfony\Component\HttpFoundation\Response" class="Symfony\Component\HttpFoundation\Response"/>
     <service id=".errored..service_locator.KfbR3DY.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
+    <service id=".errored..service_locator.ewTmbP1.App\Entity\Article" class="App\Entity\Article"/>
     <service id=".errored..service_locator.NcUNQMU.App\Entity\Article" class="App\Entity\Article"/>
     <service id=".service_locator.XXv1IfR" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
@@ -6434,12 +6441,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.VdPZNW."/>
+      <argument type="service" id=".service_locator.Ba_rPpQ"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.VdPZNW."/>
+      <argument type="service" id=".service_locator.Ba_rPpQ"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -7290,7 +7297,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.0GV1BZZ" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.VdPZNW."/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.Ba_rPpQ"/>
     <service id="session" alias=".session.do-not-use" public="true">
       <deprecated package="symfony/framework-bundle" version="5.3">The "%alias_id%" service and "SessionInterface" alias are deprecated, use "$requestStack-&gt;getSession()" instead.</deprecated>
     </service>
@@ -7311,6 +7318,7 @@
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id=".service_locator._5g_Wvc" alias=".service_locator.KfwZsne"/>
     <service id=".service_locator.JBAFp66" alias=".service_locator.KfbR3DY"/>
+    <service id=".service_locator.i0u2lVX" alias=".service_locator.ewTmbP1"/>
     <service id=".service_locator.SXPi9O." alias=".service_locator.ys8EL7c"/>
     <service id=".service_locator.H6AmQ9Q" alias=".service_locator.NcUNQMU"/>
     <service id=".service_locator.Er0_7SX" alias=".service_locator.l2QwsaZ"/>
