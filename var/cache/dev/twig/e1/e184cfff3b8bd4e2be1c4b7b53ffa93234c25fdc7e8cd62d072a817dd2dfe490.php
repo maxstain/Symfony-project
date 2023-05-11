@@ -47,7 +47,11 @@ class __TwigTemplate_4ceb72e4ce4724dfca258a1118b8f4fa73e1f4b6c7ee89f0d0dae7df0ae
 \t</button>
 
 \t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
-\t\t<ul class=\"mr-auto navbar-nav\">
+\t\t";
+        // line 8
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 8, $this->source); })()), "user", [], "any", false, false, false, 8)) {
+            // line 9
+            echo "\t\t<ul class=\"mr-auto navbar-nav\">
 \t\t\t<li class=\"nav-item\">
 \t\t\t\t<a class=\"nav-link\" href=\"/\">Home
 \t\t\t\t\t<span class=\"sr-only\">(current)</span>
@@ -64,11 +68,28 @@ class __TwigTemplate_4ceb72e4ce4724dfca258a1118b8f4fa73e1f4b6c7ee89f0d0dae7df0ae
 \t\t\t\t</div>
 \t\t\t</li>
 \t\t</ul>
-\t\t<form class=\"my-2 form-inline my-lg-0\">
-\t\t\t<input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
-\t\t\t<button class=\"my-2 btn btn-outline-success my-sm-0\" type=\"submit\">Search</button>
-\t\t</form>
-\t</div>
+\t\t<div class=\"my-2 my-lg-0\">
+\t\t\tHello, ";
+            // line 27
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 27, $this->source); })()), "user", [], "any", false, false, false, 27), "username", [], "any", false, false, false, 27), "html", null, true);
+            echo "
+\t\t</div>
+\t\t<div class=\"mx-2\">
+\t\t\t|
+\t\t</div>
+\t\t<div class=\"my-2 my-lg-0\">
+\t\t\t<a href=\"/logout\">Logout</a>
+\t\t</div>
+\t\t";
+        } else {
+            // line 36
+            echo "\t\t<div class=\"my-2 my-lg-0\">
+\t\t\t<a href=\"/login\">Login</a>
+\t\t</div>
+\t\t";
+        }
+        // line 40
+        echo "\t</div>
 </nav>
 ";
         
@@ -84,9 +105,14 @@ class __TwigTemplate_4ceb72e4ce4724dfca258a1118b8f4fa73e1f4b6c7ee89f0d0dae7df0ae
         return "shared/_menu.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  43 => 1,);
+        return array (  92 => 40,  86 => 36,  74 => 27,  54 => 9,  52 => 8,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -98,6 +124,7 @@ class __TwigTemplate_4ceb72e4ce4724dfca258a1118b8f4fa73e1f4b6c7ee89f0d0dae7df0ae
 \t</button>
 
 \t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+\t\t{% if app.user %}
 \t\t<ul class=\"mr-auto navbar-nav\">
 \t\t\t<li class=\"nav-item\">
 \t\t\t\t<a class=\"nav-link\" href=\"/\">Home
@@ -115,10 +142,20 @@ class __TwigTemplate_4ceb72e4ce4724dfca258a1118b8f4fa73e1f4b6c7ee89f0d0dae7df0ae
 \t\t\t\t</div>
 \t\t\t</li>
 \t\t</ul>
-\t\t<form class=\"my-2 form-inline my-lg-0\">
-\t\t\t<input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
-\t\t\t<button class=\"my-2 btn btn-outline-success my-sm-0\" type=\"submit\">Search</button>
-\t\t</form>
+\t\t<div class=\"my-2 my-lg-0\">
+\t\t\tHello, {{ app.user.username }}
+\t\t</div>
+\t\t<div class=\"mx-2\">
+\t\t\t|
+\t\t</div>
+\t\t<div class=\"my-2 my-lg-0\">
+\t\t\t<a href=\"/logout\">Logout</a>
+\t\t</div>
+\t\t{% else %}
+\t\t<div class=\"my-2 my-lg-0\">
+\t\t\t<a href=\"/login\">Login</a>
+\t\t</div>
+\t\t{% endif %}
 \t</div>
 </nav>
 ", "shared/_menu.html.twig", "C:\\xampp\\htdocs\\Symfony-project\\templates\\shared\\_menu.html.twig");
