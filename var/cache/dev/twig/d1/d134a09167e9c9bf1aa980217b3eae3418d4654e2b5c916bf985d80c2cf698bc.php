@@ -65,7 +65,8 @@ class __TwigTemplate_1be36914bea6945b85f1fd8bd8264a293672cfd96b3c55383a2633aad26
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Home
+        // line 4
+        echo "\tHome
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -75,7 +76,7 @@ class __TwigTemplate_1be36914bea6945b85f1fd8bd8264a293672cfd96b3c55383a2633aad26
 
     }
 
-    // line 6
+    // line 7
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -85,13 +86,13 @@ class __TwigTemplate_1be36914bea6945b85f1fd8bd8264a293672cfd96b3c55383a2633aad26
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 7
+        // line 8
         echo "\t<style></style>
 
 \t<div>
 \t\t<h1>";
-        // line 10
-        echo twig_escape_filter($this->env, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 10, $this->source); })()), "html", null, true);
+        // line 11
+        echo twig_escape_filter($this->env, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 11, $this->source); })()), "html", null, true);
         echo "</h1>
 \t</div>
 \t<div class=\"hero\"></div>
@@ -116,14 +117,15 @@ class __TwigTemplate_1be36914bea6945b85f1fd8bd8264a293672cfd96b3c55383a2633aad26
 
     public function getDebugInfo()
     {
-        return array (  94 => 10,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  95 => 11,  90 => 8,  80 => 7,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Home
+{% block title %}
+\tHome
 {% endblock %}
 
 {% block body %}
