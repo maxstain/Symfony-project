@@ -95,7 +95,6 @@ class __TwigTemplate_1be36914bea6945b85f1fd8bd8264a293672cfd96b3c55383a2633aad26
         echo twig_escape_filter($this->env, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 11, $this->source); })()), "html", null, true);
         echo "</h1>
 \t</div>
-\t<div class=\"hero\"></div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -134,7 +133,6 @@ class __TwigTemplate_1be36914bea6945b85f1fd8bd8264a293672cfd96b3c55383a2633aad26
 \t<div>
 \t\t<h1>{{message}}</h1>
 \t</div>
-\t<div class=\"hero\"></div>
 {% endblock %}
 ", "home/index.html.twig", "C:\\xampp\\htdocs\\Symfony-project\\templates\\home\\index.html.twig");
     }
