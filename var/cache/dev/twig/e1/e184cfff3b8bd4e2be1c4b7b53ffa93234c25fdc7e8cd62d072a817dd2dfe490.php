@@ -78,7 +78,7 @@ class __TwigTemplate_4ceb72e4ce4724dfca258a1118b8f4fa73e1f4b6c7ee89f0d0dae7df0ae
 \t\t\t|
 \t\t</div>
 \t\t<div class=\"my-2 my-lg-0\">
-\t\t\t<a href=\"/logout\">Logout</a>
+\t\t\t<a class=\"btn btn-danger\" href=\"/logout\">Logout</a>
 \t\t</div>
 \t\t";
         } else {
@@ -149,7 +149,7 @@ class __TwigTemplate_4ceb72e4ce4724dfca258a1118b8f4fa73e1f4b6c7ee89f0d0dae7df0ae
 \t\t\t|
 \t\t</div>
 \t\t<div class=\"my-2 my-lg-0\">
-\t\t\t<a href=\"/logout\">Logout</a>
+\t\t\t<a class=\"btn btn-danger\" href=\"/logout\">Logout</a>
 \t\t</div>
 \t\t{% else %}
 \t\t<div class=\"my-2 my-lg-0\">
