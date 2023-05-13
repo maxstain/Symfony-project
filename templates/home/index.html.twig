@@ -7,7 +7,14 @@
 {% block body %}
 	<style></style>
 
-	<div>
+	<div class="mt-4">
 		<h1>{{message}}</h1>
+		<p>Home page</p>
+
+		{% if app.user %}
+			<p>Logged in as {{app.user.username}}</p>
+		{% else %}
+			<p>Not logged in</p>
+		{% endif %}
 	</div>
 {% endblock %}

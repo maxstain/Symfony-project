@@ -13,7 +13,7 @@ class HomeController extends AbstractController
      */
     public function index(): Response
     {
-        $msg = "Home";
+        $msg = "Welcome";
         return $this->render('home/index.html.twig', [
             'message' => $msg,
         ]);

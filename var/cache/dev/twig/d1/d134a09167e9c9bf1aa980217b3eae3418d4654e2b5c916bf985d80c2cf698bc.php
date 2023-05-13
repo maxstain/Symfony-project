@@ -89,12 +89,28 @@ class __TwigTemplate_1be36914bea6945b85f1fd8bd8264a293672cfd96b3c55383a2633aad26
         // line 8
         echo "\t<style></style>
 
-\t<div>
+\t<div class=\"mt-4 text-bold\">
 \t\t<h1>";
         // line 11
         echo twig_escape_filter($this->env, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 11, $this->source); })()), "html", null, true);
         echo "</h1>
-\t</div>
+\t\t<p>Home page</p>
+
+\t\t";
+        // line 14
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 14, $this->source); })()), "user", [], "any", false, false, false, 14)) {
+            // line 15
+            echo "\t\t\t<p>Logged in as ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 15, $this->source); })()), "user", [], "any", false, false, false, 15), "username", [], "any", false, false, false, 15), "html", null, true);
+            echo "</p>
+\t\t";
+        } else {
+            // line 17
+            echo "\t\t\t<p>Not logged in</p>
+\t\t";
+        }
+        // line 19
+        echo "\t</div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -116,7 +132,7 @@ class __TwigTemplate_1be36914bea6945b85f1fd8bd8264a293672cfd96b3c55383a2633aad26
 
     public function getDebugInfo()
     {
-        return array (  95 => 11,  90 => 8,  80 => 7,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  113 => 19,  109 => 17,  103 => 15,  101 => 14,  95 => 11,  90 => 8,  80 => 7,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -130,8 +146,15 @@ class __TwigTemplate_1be36914bea6945b85f1fd8bd8264a293672cfd96b3c55383a2633aad26
 {% block body %}
 \t<style></style>
 
-\t<div>
+\t<div class=\"mt-4 text-bold\">
 \t\t<h1>{{message}}</h1>
+\t\t<p>Home page</p>
+
+\t\t{% if app.user %}
+\t\t\t<p>Logged in as {{app.user.username}}</p>
+\t\t{% else %}
+\t\t\t<p>Not logged in</p>
+\t\t{% endif %}
 \t</div>
 {% endblock %}
 ", "home/index.html.twig", "C:\\xampp\\htdocs\\Symfony-project\\templates\\home\\index.html.twig");
